@@ -13,7 +13,7 @@ const responseTimer = (req, res, next) => {
             timestamp: new Date().toISOString(),
             statusCode: res.statusCode,
             method: req.method,
-            path: req.originalUrl,
+            requrl: req.body.url,
             clientIP: req.ip,
         };
 
@@ -25,8 +25,8 @@ const responseTimer = (req, res, next) => {
         }  
         
         const resData = {
-            data: actualData,
-            res_data: data
+            reqdata: actualData,
+            metadata: data
         };
 
         console.log("Res Data:",resData)

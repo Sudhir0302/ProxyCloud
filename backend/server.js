@@ -5,11 +5,13 @@ import userRoute from './routes/userRoute.js'
 import errorHandler from './middleware/errorHandler.js'
 import proxyRouter from './routes/proxyRoute.js'
 import responseTimer from './middleware/responseTimer.js'
+import cors from 'cors'
 
 dotenv.config()
 const PORT=process.env.PORT
 
 const app=express()
+app.use(cors())
 app.use(express.json())
 app.use(responseTimer)
 
