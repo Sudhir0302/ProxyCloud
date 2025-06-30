@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import conn from './config/db.js'
 import userRoute from './routes/userRoute.js'
 import errorHandler from './middleware/errorHandler.js'
+import proxyRouter from './routes/proxyRoute.js'
 dotenv.config()
 const PORT=process.env.PORT
 
@@ -15,6 +16,7 @@ app.get("/test",(req,res)=>{
 })
 
 app.use(userRoute)
+app.use(proxyRouter)
 app.use(errorHandler)
 
 app.listen(PORT,()=>{
