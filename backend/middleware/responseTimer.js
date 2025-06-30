@@ -1,5 +1,11 @@
 
 const responseTimer = (req, res, next) => {
+
+    // console.log(req.path);
+    if(req.path!=='/proxy'){
+        return next()
+    }
+    
     const start = process.hrtime()
 
     const originalJson = res.json
