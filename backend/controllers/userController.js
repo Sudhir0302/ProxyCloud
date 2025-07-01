@@ -3,8 +3,8 @@ import User from "../models/userModel.js"
 
 const createuser=async(req,res,next)=>{
     try {
-        const check=User.findOne({username:req.body.username})
-        // console.log(check)
+        const check=await User.findOne({username:req.body.username})
+        console.log(check)
         if(check){
             return next({status:409,msg:"user already exists"})
         }

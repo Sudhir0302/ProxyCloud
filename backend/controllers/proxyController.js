@@ -3,7 +3,7 @@ import https from 'https'
 const proxy=async(proxyreq,proxyres,next)=>{
 
     const url=new URL(proxyreq.body.url)
-    console.log(url)
+    // console.log(url)
     
     if(!url){
         next({status:500,msg:"error : "+err.message,fix:"check the url"})

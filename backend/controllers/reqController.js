@@ -1,7 +1,7 @@
 import reqHistory from "../models/reqModel.js"
 
 const saveReq=async(req,res,next)=>{
-    console.log(req.body)
+    // console.log(req.body)
     try {
         const Reqdata=new reqHistory(req.body)
         await Reqdata.save()
