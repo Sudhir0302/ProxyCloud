@@ -7,7 +7,7 @@ export const SERVER=import.meta.env.VITE_SERVER
 const Home=()=>{
   return(
     <div className='bg-gray-100'>
-      <h1 className='text-3xl text-center font-bold'>ProxyCloud</h1>
+      <h1 className='text-3xl text-center font-bold p-7'>ProxyCloud</h1>
       <ProxyReq />
     </div>
   )
@@ -15,8 +15,8 @@ const Home=()=>{
 const App = () => {
   return (
     <Routes>
-        <Route path='/' element={<Login/>} />
-        <Route path='/proxy' element={<Home/>} />
+        {/* <Route path='/' element={<Login/>} /> */}
+        <Route path='/' element={<Home/>} />
     </Routes>
   )
 }
