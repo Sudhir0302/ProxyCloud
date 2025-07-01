@@ -1,5 +1,5 @@
 import React from 'react'
-import ProxyReq from './components/proxyReq'
+import ProxyReq from './components/ProxyReq'
 import Login from './pages/Login'
 import {Route,Routes } from 'react-router-dom'
 export const SERVER=import.meta.env.VITE_SERVER
