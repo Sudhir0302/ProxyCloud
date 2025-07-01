@@ -6,6 +6,7 @@ import errorHandler from './middleware/errorHandler.js'
 import proxyRouter from './routes/proxyRoute.js'
 import responseTimer from './middleware/responseTimer.js'
 import cors from 'cors'
+import reqRouter from './routes/reqRoute.js'
 
 dotenv.config()
 const PORT=process.env.PORT
@@ -21,6 +22,7 @@ app.get("/test",(req,res)=>{
 
 app.use(userRoute)
 app.use(proxyRouter)
+app.use(reqRouter)
 app.use(errorHandler)
 
 app.listen(PORT,()=>{

@@ -16,9 +16,9 @@ const createuser=async(req,res,next)=>{
     }
 }
 
-const getUser=async(req,res,next)=>{
+const login=async(req,res,next)=>{
     try {
-        const user=await User.findOne({username:req.query.username})
+        const user=await User.findOne(req.body)
         if(!user){
             return next({status:404,msg:"user not found"})
         }
@@ -28,4 +28,4 @@ const getUser=async(req,res,next)=>{
     }
 }
 
-export {createuser,getUser}
+export {createuser,login}

@@ -16,7 +16,7 @@ const responseTimer = (req, res, next) => {
 
         const data = {
             responseTime: `${timeInMs} ms`,
-            timestamp: new Date().toISOString(),
+            timestamp: new Date().toString(),
             statusCode: res.statusCode,
             method: req.method,
             requrl: req.body.url,
