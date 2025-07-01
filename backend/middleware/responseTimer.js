@@ -35,7 +35,7 @@ const responseTimer = (req, res, next) => {
             metadata: data
         };
 
-        console.log("Res Data:",resData)
+        // console.log("Res Data:",resData)
         
         return originalJson.call(this, resData)
     };
