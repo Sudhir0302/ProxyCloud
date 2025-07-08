@@ -20,7 +20,8 @@ const responseTimer = (req, res, next) => {
             statusCode: res.statusCode,
             method: req.method,
             requrl: req.body.url,
-            clientIP: req.ip,
+            clientIP: req.headers['x-forwarded-for'],
+            // clientIP: req.ip,
         };
 
         
